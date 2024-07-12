@@ -1,4 +1,11 @@
 
+# login credentials
+Admin User: admin|admin@test.com |kkkhjkjkjk
+User 1: user1|user1@test.com |password
+User 2: user2|user2@test.com |password
+
+
+
 
 # install env versions
 
