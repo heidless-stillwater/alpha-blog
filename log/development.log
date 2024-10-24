@@ -14118,3 +14118,40 @@ Completed 200 OK in 817ms (Views: 759.5ms | ActiveRecord: 0.0ms | Allocations: 1
 
   [1m[35m (33.6ms)[0m  [1m[35mCREATE DATABASE "alpha_blog_development" ENCODING = 'unicode'[0m
   [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "alpha_blog_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2024-10-24 18:26:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (89.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 431)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 789)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 260)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 364.3ms | Allocations: 106395)
+Completed 200 OK in 441ms (Views: 371.6ms | ActiveRecord: 0.0ms | Allocations: 117100)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-24 18:29:19 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 223)
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 737)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 229)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 17490)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 18529)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-24 18:29:34 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 75)
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2436)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2814)
+
+
