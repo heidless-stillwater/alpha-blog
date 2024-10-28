@@ -1,8 +1,41 @@
 
+############
+# CATEGORIES
+#
+Category.destroy_all 
+
+10.times do |n|
+  category_name = "category_#{n+1}"
+  cat = Category.create!(
+                name: category_name
+              )
+end
+
+
+##########
+# ARTICLES
+#
+Article.destroy_all 
+
+10.times do |n|
+  user_id = User.first.id
+  title = "article_#{n+1}"
+  description = "description/content for article: #{n+1}"
+  Article.create!(
+    title: title,
+    description: description,
+    user_id: user_id
+  )
+end
+
+
+
+
+
 ################
 # USER & PROFILE
 #
-User.destroy_all 
+# User.destroy_all 
 
 # 1.times do |n|
 #   email = "dev_#{n+1}@bar.com"
@@ -18,17 +51,17 @@ User.destroy_all
 
 ## admin username
 
-User.destroy_all
- 
-username = "heidless"
-email = "demo@heidless-app-0.com"
-password = "password"
-user = User.create!(
-              username: username,
-              email: email,
-              password: password,
-              password_digest: password
-            )
+# User.destroy_all
+
+# username = "heidless"
+# email = "demo@heidless-app-0.com"
+# password = "password"
+# user = User.create!(
+#               username: username,
+#               email: email,
+#               password: password,
+#               password_digest: password
+#             )
 
 
 # profile = user.profile
