@@ -5,12 +5,11 @@
 Category.destroy_all 
 
 10.times do |n|
-  category_name = "category_#{n+1}"
+  category_name = Faker::Lorem.word
   cat = Category.create!(
-                name: category_name
+                name: "#{n}-#{category_name}"
               )
 end
-
 
 ##########
 # ARTICLES
@@ -19,14 +18,15 @@ Article.destroy_all
 
 10.times do |n|
   user_id = User.first.id
-  title = "article_#{n+1}"
-  description = "description/content for article: #{n+1}"
+  title = Faker::Lorem.sentence
+  description = Faker::Lorem.paragraph
   Article.create!(
     title: title,
     description: description,
     user_id: user_id
   )
 end
+
 
 
 

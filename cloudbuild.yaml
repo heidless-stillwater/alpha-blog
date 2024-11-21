@@ -20,6 +20,27 @@ steps:
       ]
     secretEnv: ["RAILS_KEY"]
 
+
+  - id: "seed categories"
+    name: "gcr.io/google-appengine/exec-wrapper"
+    entrypoint: "bash"
+    args:
+      [
+        "-c",
+        "/buildstep/execute.sh -i gcr.io/${PROJECT_ID}/${_SERVICE_NAME} -s ${PROJECT_ID}:${_REGION}:${_INSTANCE_NAME} -e RAILS_MASTER_KEY=$$RAILS_KEY -- bundle exec rails cats:seed_categories"
+      ]
+    secretEnv: ["RAILS_KEY"]
+
+  # - id: "seed articles"
+  #   name: "gcr.io/google-appengine/exec-wrapper"
+  #   entrypoint: "bash"
+  #   args:
+  #     [
+  #       "-c",
+  #       "/buildstep/execute.sh -i gcr.io/${PROJECT_ID}/${_SERVICE_NAME} -s ${PROJECT_ID}:${_REGION}:${_INSTANCE_NAME} -e RAILS_MASTER_KEY=$$RAILS_KEY -- bundle exec rails arts:seed_articles"
+  #     ]
+  #   secretEnv: ["RAILS_KEY"]
+
 substitutions:
   _REGION: europe-west2
   _SERVICE_NAME: alpha-blog-0-svc

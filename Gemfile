@@ -1,10 +1,8 @@
 source "https://rubygems.org"
 
-ruby "3.2.3"
+# ruby "3.2.3"
+# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
-gem 'will_paginate', '~> 4.0'
 
 gem "dotenv-rails", "~> 2.8"
 
@@ -89,3 +87,7 @@ end
 gem "google-cloud-storage", "~> 1.44", require: false
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "will_paginate", "~> 4.0"
+
+gem "faker", "~> 3.5"
