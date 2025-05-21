@@ -1,9 +1,42 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+################# USERS #################
+## NOT WORKING YET ##
+## need to evolve towards a solution
+User.destroy_all 
+
+user1 = User.create(
+  :username => "jsnow", 
+  :email => "jsnow@test.com", 
+  :password => "password",
+  :password_digest => "$2a$12$rQVJ.QhNGBJhlzrKFpYN1..VdYayEmkD0WEfb/woNEqq1qmxF64fq",
+  :admin => true
+)
+
+################# POSTS #################
+Category.destroy_all 
+
+category1 = Category.create(
+  name: "Sports"
+)
+
+category2 = Category.create(
+  name: "Arts"
+)
+
+category3 = Category.create(
+  name: "Science"
+)
+
+
+################# POSTS #################
+Article.destroy_all 
+
+10.times do |i|
+  article = Article.create(
+    title: Faker::Lorem.sentence(word_count: 3),
+    description: Faker::Lorem.paragraph(sentence_count: 3),
+    user: user1
+  )
+  # post.image.attach(io: File.open(Rails.root.join("db", "images", "properties", "property_#{i + 1}.png")), filename: post.title )
+end
+
